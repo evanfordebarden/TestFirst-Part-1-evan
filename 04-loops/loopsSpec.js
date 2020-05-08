@@ -182,22 +182,24 @@ describe('looping over objects', () => {
       of the object and avoid any that are on the object's 'internal prototype' (.__proto__) property.
     */
     it("skips properties of the object's prototype", () => {
-      /* 
-        Alphabet is a constructor function that will use the `new` method of
-        object creation
-      */
-      const Alphabet = function () {
-        this.a = 1;
-        this.b = 2;
+
+      const alphabetPrototype = {c: 3};
+      //   alphabet is a factory function 
+      function alphabet() {
+        const instanceOfAlphabet = Object.create(alphabetPrototype)
+        instanceOfAlphabet.a = 1;
+        instanceOfAlphabet.b = 2;
+        
+        return instanceOfAlphabet;
       };
 
-      Alphabet.prototype.c = 3;
+      
 
-      const alphabet = new Alphabet();
-      // {a:1, b:2} --> Alphabet.prototype
+      const alphabetInstance = alphabet();
+      
 
       // see how we're skipping `c` ?
-      expect(paramify(alphabet)).toEqual('a=1&b=2');
+      expect(paramify(alphabetInstance)).toEqual('a=1&b=2');
     });
 
     it('calls Object.prototype.hasOwnProperty and does not use Object.keys', () => {
@@ -253,17 +255,22 @@ describe('looping over objects', () => {
     });
 
     it("skips properties of the object's prototype", () => {
-      const Alphabet = function () {
-        this.a = 1;
-        this.b = 2;
+      const alphabetPrototype = {c: 3};
+      //   alphabet is a factory function 
+      function alphabet() {
+        const instanceOfAlphabet = Object.create(alphabetPrototype)
+        instanceOfAlphabet.a = 1;
+        instanceOfAlphabet.b = 2;
+        
+        return instanceOfAlphabet;
       };
 
-      Alphabet.prototype.c = 3;
+      
 
-      const alphabet = new Alphabet();
+      const alphabetInstance = alphabet();
 
       // see how we're skipping `c` again?
-      expect(paramifyObjectKeys(alphabet)).toEqual('a=1&b=2');
+      expect(paramifyObjectKeys(alphabetInstance)).toEqual('a=1&b=2');
     });
 
     it('calls Object.keys and does not use Object.prototype.hasOwnProperty', () => {
