@@ -23,7 +23,7 @@ In your TestFirst directory run the command:
 $ npx testem
 ```
 
-After `testem` initiates, connect to `localhost:7357` in your web browser and your test specs will load.
+After `testem` initiates, connect to `http//localhost:7357` in your web browser and your test specs will load.
 
 
 
