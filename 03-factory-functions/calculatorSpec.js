@@ -1,5 +1,5 @@
-/* eslint-env jasmine */
 /* eslint-disable no-undef */
+
 
 /*
   In this exercise create a function that can
@@ -114,9 +114,9 @@ describe('createCalculator', () => {
     let arrayOfCalculatorInstances;
     let updatedInstances;
 
-    /* 
+    /*
       In the beforeEach function, 1000 calculator instances are created
-      and pushed into the arrayOfCalculatorInstances array. 
+      and pushed into the arrayOfCalculatorInstances array.
     */
     beforeEach(() => {
       arrayOfCalculatorInstances = [];

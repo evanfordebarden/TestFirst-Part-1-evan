@@ -1,0 +1,25 @@
+{
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jasmine": true,
+      "node": true
+    },
+    "extends": ["eslint:recommended"],    
+    "parserOptions": {      
+      "ecmaVersion": 2018      
+    },
+    // Don't lint these things. They're always gonna be messy.
+    "ignorePatterns": ["node_modules"],
+    "rules": {
+      "semi": "off",      
+      "no-trailing-spaces": "warn",
+      "no-console": "off",
+      "no-multiple-empty-lines": "warn",
+      "no-unused-vars": [
+        "warn"        
+      ],
+      "no-prototype-builtins": "off"
+    }
+  }

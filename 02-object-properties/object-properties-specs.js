@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars, no-undef */
+
 describe('Properties on Object Literal', () => {
   let object;
 
@@ -65,7 +67,7 @@ describe('Properties on an Array Object', () => {
 });
 
 /* Functions are also Objects! Functions and Arrays
-have the same features as Object Literals. You can add properties to them, 
+have the same features as Object Literals. You can add properties to them,
 pass them to functions as arguments, and return them as values from functions.
 */
 
