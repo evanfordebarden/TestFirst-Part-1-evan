@@ -31,7 +31,7 @@ describe('Looping', () => {
 
       repeat('yo', 4);
 
-      /* 
+      /*
        This test is making sure that you did not call the built in
        `repeat` in your code to pass the specs. You gotta do it yourself!
       */
@@ -79,7 +79,7 @@ describe('Looping', () => {
       );
     });
 
-    /* 
+    /*
       This test is to make sure you don't use "for (let i in a)" on an array
       Remember how we can add any type of key/value pair to an array object
       since it's just like a regular object? When we loop over this array,
@@ -120,7 +120,7 @@ describe('Looping', () => {
       //Remember, '\n' is the character for a new line.
       expect(gridGenerator(3)).toEqual('# #\n # \n# #\n');
 
-      /* 
+      /*
         This grid is a 3 x 3 and will look like:
         # #
          #
@@ -134,7 +134,7 @@ describe('Looping', () => {
   });
 });
 
-/* 
+/*
   Let's practice looping over objects using the for(let i in obj) since
   Here we have to also be aware of properties that are on an object's internal prototype (.__proto__)
 */
@@ -167,7 +167,7 @@ describe('looping over objects', () => {
       expect(paramify(object)).toEqual('a=1&b=2&c=3&d=4&e=5&f=6');
     });
 
-    /* 
+    /*
       This one might be a bit tricky ;-)
       Maybe there is a built in method that can help you?
     */
@@ -177,26 +177,22 @@ describe('looping over objects', () => {
       expect(paramify(object)).toEqual('a=1&b=2&c=3&d=4&e=5&f=6');
     });
 
-    /* 
+    /*
       This one is also tricky, here we want you to only `paramify` the properties
       of the object and avoid any that are on the object's 'internal prototype' (.__proto__) property.
     */
     it("skips properties of the object's prototype", () => {
 
       const alphabetPrototype = {c: 3};
-      //   alphabet is a factory function 
+      //   alphabet is a factory function
       function alphabet() {
         const instanceOfAlphabet = Object.create(alphabetPrototype)
         instanceOfAlphabet.a = 1;
         instanceOfAlphabet.b = 2;
-        
         return instanceOfAlphabet;
-      };
-
-      
+      }
 
       const alphabetInstance = alphabet();
-      
 
       // see how we're skipping `c` ?
       expect(paramify(alphabetInstance)).toEqual('a=1&b=2');
@@ -256,17 +252,13 @@ describe('looping over objects', () => {
 
     it("skips properties of the object's prototype", () => {
       const alphabetPrototype = {c: 3};
-      //   alphabet is a factory function 
+      //   alphabet is a factory function
       function alphabet() {
         const instanceOfAlphabet = Object.create(alphabetPrototype)
         instanceOfAlphabet.a = 1;
         instanceOfAlphabet.b = 2;
-        
         return instanceOfAlphabet;
-      };
-
-      
-
+      }
       const alphabetInstance = alphabet();
 
       // see how we're skipping `c` again?
@@ -276,7 +268,7 @@ describe('looping over objects', () => {
     it('calls Object.keys and does not use Object.prototype.hasOwnProperty', () => {
       const object = { f: 6, e: 5, d: 4, c: 3, b: 2, a: 1 };
 
-      spyOn(object, 'hasOwnProperty').and.callThrough();      
+      spyOn(object, 'hasOwnProperty').and.callThrough();
       spyOn(Object, 'keys').and.callThrough();
 
 

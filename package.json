@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FullstackAcademy/TestFirst-Part-1#readme",
   "devDependencies": {
+    "eslint": "^7.4.0",
     "testem": "^2.14.0"
   }
 }

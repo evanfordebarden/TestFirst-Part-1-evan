@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const hi =;
 const bye = 'bye;
 const world = 'world"

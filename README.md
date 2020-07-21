@@ -12,6 +12,7 @@ TestFirst JavaScript is a multi-part series that provides practice to intermedia
 
 - **[Fork the repository to your personal GitHub Account](https://github.com/fullstackacademy/TestFirst-Part-1/)**
 - Clone the repository to your local machine
+- Run `npm install` (this will install packages to this project such as ESLint)
 - Run `testem` with the `npx testem` command.
 
 
