@@ -3,23 +3,32 @@
       "browser": true,
       "commonjs": true,
       "es6": true,
-      "jasmine": true,
-      "node": true
+      "mocha": true,
+      "node": true,
+      "jasmine":true,
     },
-    "extends": ["eslint:recommended"],    
-    "parserOptions": {      
-      "ecmaVersion": 2018      
+    "extends": ["eslint:recommended", "prettier"],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
     },
     // Don't lint these things. They're always gonna be messy.
-    "ignorePatterns": ["node_modules"],
+    "ignorePatterns": ["dist", "bundle*", "node_modules"],
     "rules": {
-      "semi": "off",      
+      "semi": "off",
       "no-trailing-spaces": "warn",
       "no-console": "off",
       "no-multiple-empty-lines": "warn",
       "no-unused-vars": [
-        "warn"        
-      ],
-      "no-prototype-builtins": "off"
+        "warn",
+        {
+          // It's okay to not use the next arg in an Express route
+          "argsIgnorePattern": "^next$"
+        }
+      ]
     }
   }

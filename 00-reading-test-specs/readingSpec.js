@@ -6,7 +6,7 @@ describe('the function `hello`', () => {
     expect(hello()).toEqual(FILL_ME_IN);
   });
 
-  it('says hello to someone', () => {
+  it('says hello to someone', () => 
     expect(hello('Fred')).toEqual(FILL_ME_IN);
   });
 });
