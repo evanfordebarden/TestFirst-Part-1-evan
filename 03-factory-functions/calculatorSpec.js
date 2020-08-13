@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 
-
 /*
   In this exercise create a function that can
   create and return a calculator object
@@ -43,7 +42,6 @@ describe('createCalculator', () => {
     */
     expect(calculator.value()).toBe(0);
     expect(secondCalculator.value()).toBe(0);
-
   });
 
   it('can add a number', () => {
@@ -75,7 +73,6 @@ describe('createCalculator', () => {
   });
 
   it('can subtract a number', () => {
-
     calculator.subtract(2);
     secondCalculator.subtract(15);
     expect(calculator.value()).toBe(-2);
@@ -234,5 +231,4 @@ describe('createHumanCalculator', () => {
     humanCalculator.clear();
     expect(humanCalculator.value()).toEqual(-10);
   });
-
 });

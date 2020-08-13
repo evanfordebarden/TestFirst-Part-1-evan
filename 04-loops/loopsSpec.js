@@ -182,11 +182,10 @@ describe('looping over objects', () => {
       of the object and avoid any that are on the object's 'internal prototype' (.__proto__) property.
     */
     it("skips properties of the object's prototype", () => {
-
-      const alphabetPrototype = {c: 3};
+      const alphabetPrototype = { c: 3 };
       //   alphabet is a factory function
       function alphabet() {
-        const instanceOfAlphabet = Object.create(alphabetPrototype)
+        const instanceOfAlphabet = Object.create(alphabetPrototype);
         instanceOfAlphabet.a = 1;
         instanceOfAlphabet.b = 2;
         return instanceOfAlphabet;
@@ -251,10 +250,10 @@ describe('looping over objects', () => {
     });
 
     it("skips properties of the object's prototype", () => {
-      const alphabetPrototype = {c: 3};
+      const alphabetPrototype = { c: 3 };
       //   alphabet is a factory function
       function alphabet() {
-        const instanceOfAlphabet = Object.create(alphabetPrototype)
+        const instanceOfAlphabet = Object.create(alphabetPrototype);
         instanceOfAlphabet.a = 1;
         instanceOfAlphabet.b = 2;
         return instanceOfAlphabet;
@@ -270,7 +269,6 @@ describe('looping over objects', () => {
 
       spyOn(object, 'hasOwnProperty').and.callThrough();
       spyOn(Object, 'keys').and.callThrough();
-
 
       paramifyObjectKeys(object);
 
