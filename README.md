@@ -10,9 +10,9 @@ TestFirst JavaScript is a multi-part series that provides practice to intermedia
 ### Setup Test First
 
 - **[Fork the repository to your personal GitHub Account](https://github.com/fullstackacademy/TestFirst-Part-1/)**
-- Clone the repository to your local machine
-- Run `npm install` (this will install packages to this project such as `ESLint`, `Pettier`, `testem`)
-- Intall the ESLinte and Prettier Extensions (if they aren't already installed)
+- **Clone** the repository to your local machine
+- Run the command `npm install` inside of the TestFirst directory (this will install packages to this project such as `ESLint`, `Pettier`, `testem`)
+- Intall the ESLint and Prettier Extensions (if they aren't already installed)
 - Run `testem` with the `npm run test` command or `npx testem` command
 
 ### Run Testem with npx testem
