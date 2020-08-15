@@ -11,8 +11,8 @@ TestFirst JavaScript is a multi-part series that provides practice to intermedia
 
 - **[Fork the repository to your personal GitHub Account](https://github.com/fullstackacademy/TestFirst-Part-1/)**
 - **Clone** the repository to your local machine
+- Install the VSCode [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) Extensions (if they aren't already installed)
 - Run the command `npm install` inside of the TestFirst directory (this will install packages to this project such as `ESLint`, `Pettier`, `testem`)
-- Intall the ESLint and Prettier Extensions (if they aren't already installed)
 - Run `testem` with the `npm run test` command or `npx testem` command
 
 ### Run Testem with npx testem
